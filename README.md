@@ -142,6 +142,7 @@ row_bordered       0.95      0.99      0.97       100
     accuracy                           0.98       300
    macro avg       0.98      0.98      0.98       300
 weighted avg       0.98      0.98      0.98       300
+------------------------------------------------------------
 
 CONFUSION MATRIX
 ------------------------------------------------------------
@@ -149,6 +150,7 @@ CONFUSION MATRIX
 True bordered                 96                0                  4
 True borderless                0               99                  1
 True row_bordered              1                0                 99
+------------------------------------------------------------
 
 #### ResNet-50 Performance
 Overall Accuracy: 96.00%
@@ -162,6 +164,7 @@ row_bordered       0.98      0.90      0.94       100
     accuracy                           0.96       300
    macro avg       0.96      0.96      0.96       300
 weighted avg       0.96      0.96      0.96       300
+------------------------------------------------------------
 
 CONFUSION MATRIX
 ------------------------------------------------------------
@@ -169,6 +172,7 @@ CONFUSION MATRIX
 True bordered                 98                0                  2
 True borderless                0              100                  0
 True row_bordered              9                1                 90
+------------------------------------------------------------
 
 ### Key Performance Comparison
 Metric | EfficientNet-B3 | ResNet-50 | Advantage
