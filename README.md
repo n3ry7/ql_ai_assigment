@@ -154,8 +154,30 @@ The solution uses a deep learning pipeline with the following components:
 2. **Advanced Augmentation**: Add document-specific augmentations (perspective distortion, noise)
 
 ### 4. Model Performance on Test Data
-- **Final Test Accuracy**: 98.0% (EfficientNet-B3), 96.0% (ResNet-50)
-- **Precision/Recall**: >97% for all classes with EfficientNet-B3
+
+- **Accuracy**: 98.00%
+- **Precision**: 0.9805
+- **Recall**: 0.9800
+- **F1-Score**: 0.9801
+- **Average Confidence**: 0.9859 ± 0.0573
+- **Total Samples**: 300
+- **Misclassified Samples**: 6 (2.00% error rate)
+
+### Per-Class Performance
+
+| Class | Precision | Recall | F1-Score | Support |
+|-------|-----------|--------|----------|---------|
+| **bordered** | 0.9897 | 0.9600 | 0.9746 | 100 |
+| **borderless** | 1.0000 | 0.9900 | 0.9950 | 100 |
+| **row_bordered** | 0.9519 | 0.9900 | 0.9706 | 100 |
+
+### Confusion Matrix
+
+| True \ Predicted | bordered | borderless | row_bordered |
+|------------------|----------|------------|--------------|
+| **bordered** | 96 | 0 | 4 |
+| **borderless** | 0 | 99 | 1 |
+| **row_bordered** | 1 | 0 | 99 |
 
 ### Usage Example:
 python inference.py --mode evaluate --model_path ./experiments/efficientnet_b3/best_model.pth --eval_csv ./data/test.csv --eval_dir ./data/test --batch_size 16
