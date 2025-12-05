@@ -1,0 +1,12 @@
+{
+  "class_to_idx": {
+    "bordered": 0,
+    "borderless": 1,
+    "row_bordered": 2
+  },
+  "idx_to_class": {
+    "0": "bordered",
+    "1": "borderless",
+    "2": "row_bordered"
+  }
+}
