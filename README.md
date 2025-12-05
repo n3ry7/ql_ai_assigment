@@ -131,61 +131,57 @@ results = classifier.evaluate_on_csv('test.csv', 'test_dir/', batch_size=16)
 ### Comprehensive Evaluation Results
 
 #### EfficientNet-B3 Performance (Recommended Model)
-Overall Accuracy: 98.00%
+**Overall Accuracy: 98.00%**
 
-DETAILED CLASSIFICATION REPORT
-------------------------------------------------------------
-              precision    recall  f1-score   support
-    bordered       0.99      0.96      0.97       100
-  borderless       1.00      0.99      0.99       100
-row_bordered       0.95      0.99      0.97       100
-    accuracy                           0.98       300
-   macro avg       0.98      0.98      0.98       300
-weighted avg       0.98      0.98      0.98       300
-------------------------------------------------------------
+**Classification Report:**
+| Class         | Precision | Recall | F1-Score | Support |
+|---------------|-----------|--------|----------|---------|
+| bordered      | 0.99      | 0.96   | 0.97     | 100     |
+| borderless    | 1.00      | 0.99   | 0.99     | 100     |
+| row_bordered  | 0.95      | 0.99   | 0.97     | 100     |
+| **Accuracy**  |           |        | **0.98** | **300** |
+| Macro Avg     | 0.98      | 0.98   | 0.98     | 300     |
+| Weighted Avg  | 0.98      | 0.98   | 0.98     | 300     |
 
-CONFUSION MATRIX
-------------------------------------------------------------
-                   Pred bordered  Pred borderless  Pred row_bordered
-True bordered                 96                0                  4
-True borderless                0               99                  1
-True row_bordered              1                0                 99
-------------------------------------------------------------
+**Confusion Matrix:**
+| True \ Predicted | bordered | borderless | row_bordered |
+|------------------|----------|------------|--------------|
+| bordered         | 96       | 0          | 4            |
+| borderless       | 0        | 99         | 1            |
+| row_bordered     | 1        | 0          | 99           |
 
 #### ResNet-50 Performance
-Overall Accuracy: 96.00%
+**Overall Accuracy: 96.00%**
 
-DETAILED CLASSIFICATION REPORT
-------------------------------------------------------------
-              precision    recall  f1-score   support
-    bordered       0.92      0.98      0.95       100
-  borderless       0.99      1.00      1.00       100
-row_bordered       0.98      0.90      0.94       100
-    accuracy                           0.96       300
-   macro avg       0.96      0.96      0.96       300
-weighted avg       0.96      0.96      0.96       300
-------------------------------------------------------------
+**Classification Report:**
+| Class         | Precision | Recall | F1-Score | Support |
+|---------------|-----------|--------|----------|---------|
+| bordered      | 0.92      | 0.98   | 0.95     | 100     |
+| borderless    | 0.99      | 1.00   | 1.00     | 100     |
+| row_bordered  | 0.98      | 0.90   | 0.94     | 100     |
+| **Accuracy**  |           |        | **0.96** | **300** |
+| Macro Avg     | 0.96      | 0.96   | 0.96     | 300     |
+| Weighted Avg  | 0.96      | 0.96   | 0.96     | 300     |
 
-CONFUSION MATRIX
-------------------------------------------------------------
-                   Pred bordered  Pred borderless  Pred row_bordered
-True bordered                 98                0                  2
-True borderless                0              100                  0
-True row_bordered              9                1                 90
-------------------------------------------------------------
+**Confusion Matrix:**
+| True \ Predicted | bordered | borderless | row_bordered |
+|------------------|----------|------------|--------------|
+| bordered         | 98       | 0          | 2            |
+| borderless       | 0        | 100        | 0            |
+| row_bordered     | 9        | 1          | 90           |
 
 ### Key Performance Comparison
-Metric | EfficientNet-B3 | ResNet-50 | Advantage
---- | --- | --- | ---
-**Accuracy** | 98.00% | 96.00% | +2.00%
-**Precision (weighted)** | 0.9805 | 0.96 | +0.0205
-**Recall (weighted)** | 0.9800 | 0.96 | +0.0200
-**F1-Score (weighted)** | 0.9801 | 0.96 | +0.0201
-**Borderless Table F1** | 0.9950 | 1.0000 | -0.0050
-**Bordered Table F1** | 0.9746 | 0.9469 | +0.0277
-**Row-Bordered Table F1** | 0.9706 | 0.9375 | +0.0331
-**Misclassified Examples** | 6/300 (2.00%) | 12/300 (4.00%) | -50% errors
-**Avg Confidence** | N/A | 0.9876 ± 0.0612 | High confidence
+| Metric | EfficientNet-B3 | ResNet-50 | Advantage |
+|--------|----------------|-----------|-----------|
+| **Accuracy** | 98.00% | 96.00% | +2.00% |
+| **Precision (weighted)** | 0.9805 | 0.96 | +0.0205 |
+| **Recall (weighted)** | 0.9800 | 0.96 | +0.0200 |
+| **F1-Score (weighted)** | 0.9801 | 0.96 | +0.0201 |
+| **Borderless Table F1** | 0.9950 | 1.0000 | -0.0050 |
+| **Bordered Table F1** | 0.9746 | 0.9469 | +0.0277 |
+| **Row-Bordered Table F1** | 0.9706 | 0.9375 | +0.0331 |
+| **Misclassified Examples** | 6/300 (2.00%) | 12/300 (4.00%) | -50% errors |
+| **Avg Confidence** | N/A | 0.9876 ± 0.0612 | High confidence |
 
 ### Performance Analysis
 1. **EfficientNet-B3 Superiority**:
