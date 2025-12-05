@@ -3,6 +3,8 @@
 ## Project Overview
 This project implements a deep learning solution for classifying table images into different categories. The system processes document images, extracts features, and classifies them using convolutional neural networks (CNNs). The solution achieves **98% accuracy** on test data using EfficientNet-B3 architecture.
 
+**weights available at release section**
+
 ## Installation
 ### Requirements
 - Python 3.11.11
@@ -118,6 +120,8 @@ The `inference.py` script provides a complete inference pipeline that can:
 - Export results to CSV format
 - Run on CPU or GPU
 - Perform comprehensive model evaluation with detailed metrics
+
+Weights for trained models are available at the release section.
 
 ### 3. Assignment Questions
 
